@@ -1,6 +1,6 @@
 # <img src="icons/favicon-48x48.png" alt="Zen Homepage Fixer" width="32" style="vertical-align: middle;"> Zen - Homepage Fixer
 
-A Firefox extension that automatically opens a customizable homepage when the last tab is closed in Zen Browser.
+A Firefox extension that automatically opens a customizable homepage when the last tab is closed in [Zen browser](https://zen-browser.app/).
 
 ![The extension](github/homepage.png)
 
