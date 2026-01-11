@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Zen - Homepage fixer",
+  "author": "Axel Thauvin",
+  "version": "1.0",
+  "description": "Replace the Zen 'blank page' with a customizable homepage.",
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icons/favicon-16x16.png",
+      "48": "icons/favicon-48x48.png",
+      "128": "icons/favicon-128x128.png"
+    },
+    "default_title": "Zen Homepage Settings"
+  },
+  "permissions": ["tabs", "storage"],
+  "icons": {
+    "16": "icons/favicon-16x16.png",
+    "48": "icons/favicon-48x48.png",
+    "128": "icons/favicon-128x128.png"
+  }
+}

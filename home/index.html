@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="../icons/favicon-128x128.png" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="welcome-text" id="welcome">
+        welcome to<br />
+        a <span class="accent">calmer</span> internet
+      </h1>
+
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search the web..."
+          id="searchInput"
+          autofocus
+        />
+      </div>
+
+      <div class="shortcuts-container">
+        <div class="shortcuts-grid" id="shortcutsGrid">
+          <!-- Shortcuts will be added here dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <div class="config-buttons">
+      <button class="edit-btn" id="editBtn" title="Edit shortcuts">
+        <img src="../icons/settings.svg" alt="Edit" />
+      </button>
+
+      <button class="settings-btn" id="settingsBtn" title="Search settings">
+        <img src="../icons/search.svg" alt="Search" />
+      </button>
+    </div>
+
+    <!-- Modal for adding shortcuts -->
+    <div class="modal" id="addShortcutModal">
+      <div class="modal-content">
+        <h2 class="modal-title">Add Shortcut</h2>
+        <input
+          type="text"
+          class="modal-input"
+          id="shortcutName"
+          placeholder="Name (e.g., GitHub)"
+        />
+        <input
+          type="text"
+          class="modal-input"
+          id="shortcutUrl"
+          placeholder="URL (e.g., https://github.com)"
+        />
+        <div class="modal-buttons">
+          <button class="modal-btn" id="cancelBtn">Cancel</button>
+          <button class="modal-btn primary" id="saveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for search engine settings -->
+    <div class="modal" id="searchSettingsModal">
+      <div class="modal-content modal-large">
+        <h2 class="modal-title">Search Engine Settings</h2>
+
+        <div class="settings-section">
+          <label class="settings-label">
+            <input
+              type="checkbox"
+              id="showLogoCheckbox"
+              class="settings-checkbox"
+            />
+            <span>Show search engine logo</span>
+          </label>
+        </div>
+
+        <div class="settings-section">
+          <h3 class="settings-subtitle">Popular Search Engines</h3>
+          <div class="search-engines-grid">
+            <button class="engine-option" data-engine="google">
+              <img src="https://www.google.com/favicon.ico" alt="Google" />
+              <span>Google</span>
+            </button>
+            <button class="engine-option" data-engine="duckduckgo">
+              <img src="https://duckduckgo.com/favicon.ico" alt="DuckDuckGo" />
+              <span>DuckDuckGo</span>
+            </button>
+            <button class="engine-option" data-engine="bing">
+              <img src="https://www.bing.com/favicon.ico" alt="Bing" />
+              <span>Bing</span>
+            </button>
+            <button class="engine-option" data-engine="yahoo">
+              <img src="https://www.yahoo.com/favicon.ico" alt="Yahoo" />
+              <span>Yahoo</span>
+            </button>
+            <button class="engine-option" data-engine="brave">
+              <img
+                src="https://brave.com/static-assets/images/brave-favicon.png"
+                alt="Brave"
+              />
+              <span>Brave</span>
+            </button>
+            <button class="engine-option" data-engine="ecosia">
+              <img src="https://www.ecosia.org/favicon.ico" alt="Ecosia" />
+              <span>Ecosia</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3 class="settings-subtitle">Custom Search Engine</h3>
+          <input
+            type="text"
+            class="modal-input"
+            id="customEngineName"
+            placeholder="Engine name (e.g., My Search)"
+          />
+          <input
+            type="text"
+            class="modal-input"
+            id="customEngineUrl"
+            placeholder="Search URL (use %s for query, e.g., https://example.com/search?q=%s)"
+          />
+          <input
+            type="text"
+            class="modal-input"
+            id="customEngineFavicon"
+            placeholder="Favicon URL (optional)"
+          />
+          <button class="modal-btn" id="setCustomEngineBtn">
+            Set Custom Engine
+          </button>
+        </div>
+
+        <div class="modal-buttons">
+          <button class="modal-btn" id="closeSettingsBtn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="search.js"></script>
+    <script src="greetings.js"></script>
+    <script src="shortcuts.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
