@@ -21,6 +21,19 @@ This extension monitors your browser tabs and automatically opens your chosen ho
 
 ![The config](github/config.png)
 
+## Configuration
+
+Click on the extension icon in your toolbar to open the configuration popup. Here you can:
+
+- **Set any URL as your default homepage** - Enter any website URL (e.g., `google.com`, `github.com`, `reddit.com`)
+- The extension will automatically open this URL when you close your last tab
+- Leave it empty to use the built-in Zen homepage
+- Changes are saved automatically
+
+![Popup window](github/popup.png)
+
+The popup makes it easy to switch between different homepages without diving into settings!
+
 ## Installation
 
 Download the latest release from the [Releases page](https://github.com/Axthauvin/zen-home-page-fix/releases) and install it in Firefox.
