@@ -6,6 +6,8 @@
 
 A Firefox extension that automatically opens a customizable homepage when the last tab is closed in [Zen browser](https://zen-browser.app/).
 
+> **Disclaimer**: This extension is not affiliated with, endorsed by, or associated with Zen Browser.
+
 ![The extension](github/homepage.png)
 
 ## Features
