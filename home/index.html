@@ -116,6 +116,216 @@
         </div>
 
         <div class="settings-section">
+          <h3
+            class="settings-subtitle"
+            id="backgroundHeader"
+            style="
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
+            <div>
+              <img
+                src="../icons/wallpaper.svg"
+                alt="Wallpaper"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  vertical-align: middle;
+                  margin-right: 0.5rem;
+                "
+              />
+              Background
+            </div>
+            <img id="backgroundToggle" src="../icons/arrow.svg" />
+          </h3>
+
+          <!-- Collapsible Background Content -->
+          <div id="backgroundContent" style="display: block">
+            <!-- Live Preview -->
+            <div class="wallpaper-live-preview" id="wallpaperLivePreview">
+              <div class="preview-background" id="previewBackground">
+                <div class="preview-content" id="previewContent">
+                  <span class="preview-label">Live Preview</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="background-tabs" style="margin-top: 1rem">
+              <button class="tab-btn active" id="colorTab" data-tab="color">
+                Color
+              </button>
+              <button class="tab-btn" id="imageTab" data-tab="image">
+                Image
+              </button>
+            </div>
+
+            <!-- Tab Content Container -->
+            <div class="tab-content-container">
+              <!-- Color Tab Content -->
+              <div class="tab-content active" id="colorTabContent">
+                <div style="margin-top: 1rem">
+                  <label class="settings-label" style="margin-bottom: 0.75rem">
+                    <span>Choose a solid background color:</span>
+                  </label>
+                  <div style="display: flex; gap: 0.5rem; align-items: center">
+                    <input
+                      type="color"
+                      id="wallpaperColor"
+                      value="#1f1f1f"
+                      class="color-picke"
+                    />
+                    <button
+                      class="modal-btn primary"
+                      id="applyColorBtn"
+                      style="flex: 1; margin: 0"
+                    >
+                      Apply Color
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Image Tab Content -->
+              <div class="tab-content" id="imageTabContent">
+                <!-- Drag and Drop Area -->
+                <div
+                  class="drag-drop-area"
+                  id="dragDropArea"
+                  style="margin-top: 1rem"
+                >
+                  <img
+                    src="../icons/wallpaper.svg"
+                    alt="Upload"
+                    class="drag-drop-icon"
+                  />
+                  <p class="drag-drop-text">Drag & drop an image here</p>
+                  <p class="drag-drop-subtext">or</p>
+                </div>
+
+                <!-- Image Source Buttons -->
+                <div style="margin-top: 0.75rem">
+                  <input
+                    type="file"
+                    id="wallpaperUpload"
+                    accept="image/png,image/jpeg,image/jpg"
+                    style="display: none"
+                  />
+                  <div
+                    style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem"
+                  >
+                    <button
+                      class="modal-btn"
+                      id="wallpaperUploadBtn"
+                      style="flex: 1; margin: 0"
+                    >
+                      Browse Files
+                    </button>
+                    <button
+                      class="modal-btn primary"
+                      id="bingImageBtn"
+                      style="flex: 1; margin: 0"
+                    >
+                      Bing Image
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Effects Controls (Hidden by default) -->
+                <div
+                  id="effectsControls"
+                  style="margin-top: 1rem; display: none"
+                >
+                  <span
+                    style="
+                      display: block;
+                      margin-bottom: 1rem;
+                      color: rgba(209, 207, 192, 0.7);
+                      font-size: 0.9rem;
+                    "
+                    >Effects</span
+                  >
+
+                  <div class="slider-group">
+                    <label class="slider-label"
+                      >Opacity: <span id="opacityValue">50</span>%</label
+                    >
+                    <input
+                      type="range"
+                      id="wallpaperOpacity"
+                      min="0"
+                      max="100"
+                      value="50"
+                      class="settings-slider"
+                    />
+                  </div>
+
+                  <div class="slider-group">
+                    <label class="slider-label"
+                      >Blur: <span id="blurValue">0</span>px</label
+                    >
+                    <input
+                      type="range"
+                      id="wallpaperBlur"
+                      min="0"
+                      max="20"
+                      value="0"
+                      class="settings-slider"
+                    />
+                  </div>
+
+                  <div class="slider-group">
+                    <label class="slider-label"
+                      >Grain: <span id="grainValue">0</span>%</label
+                    >
+                    <input
+                      type="range"
+                      id="wallpaperGrain"
+                      min="0"
+                      max="100"
+                      value="0"
+                      class="settings-slider"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+              <button
+                class="modal-btn"
+                id="removeWallpaperBtn"
+                style="
+                  flex: 1;
+                  background: rgba(247, 111, 83, 0.2);
+                  color: var(--accent-color);
+                  margin: 0;
+                  display: none;
+                "
+              >
+                Clear Background
+              </button>
+              <button
+                class="modal-btn"
+                id="resetAllBtn"
+                style="
+                  flex: 1;
+                  background: rgba(209, 207, 192, 0.1);
+                  color: var(--zen-dark);
+                  margin: 0;
+                "
+              >
+                ↺ Reset All
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-section">
           <h3 class="settings-subtitle">Search Engine</h3>
           <label class="settings-label">
             <input
